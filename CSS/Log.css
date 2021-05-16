@@ -1,0 +1,138 @@
+form {
+    margin: 0 auto;
+    height: 100px;
+    width: 200px;
+    padding: 3.5em;
+    border: 3.5px solid #CCC;
+    border-radius: 1em;
+}
+
+form div+div {
+    margin-top: 1em;
+}
+
+img {
+    width: 300px;
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    background: linear-gradient(-320deg, #0ce6c9, #7f06b8, #23a6d5, #011f20);
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+div a {
+    width: 100%;
+    max-width: 250px;
+    height: 54px;
+    padding: 8px;
+    font-size: 0.8rem;
+    font-weight: 900;
+    color: #ff4655;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 0 0 1px inset rgba(236, 232, 225, 0.952);
+    position: relative;
+    margin: 10px 0;
+}
+
+div a p {
+    margin: 0;
+    height: 54px;
+    line-height: 55px;
+    box-sizing: border-box;
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+div a p span.base {
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border: 1px solid #e00000;
+}
+
+div a p span.base:before {
+    content: "";
+    width: 2px;
+    height: 2px;
+    left: -1px;
+    top: -1px;
+    background: #145ea8;
+    position: absolute;
+    transition: 0.3s ease-out all;
+}
+
+div a p .bg {
+    left: -5%;
+    position: absolute;
+    background: #ff4655;
+    width: 0;
+    height: 100%;
+    z-index: 3;
+    transition: 0.3s ease-out all;
+    transform: skewX(-10deg);
+}
+
+div a p span.text {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+div a p span.text:after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    right: 0;
+    bottom: 0;
+    background: #e8eef3;
+    position: absolute;
+    transition: 0.3s ease-out all;
+    z-index: 5;
+}
+
+div a:hover {
+    color: #ece8e1;
+}
+
+div a:hover .bg {
+    width: 110%;
+}
+
+div a:hover span.text:after {
+    background: #ece8e1;
+}
